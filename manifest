@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1.0
+apiversion: 2
+description: Remove the TableView-Separator on Android
+author: Hendrik Elsner
+license: Specify your license
+copyright: copyleft 2013
+
+
+# these should not be edited
+name: noSeparator
+moduleid: de.hpm.noseparator
+guid: e130853f-f850-4bed-9fe1-453179e9acd2
+platform: android
+minsdk: 3.1.2.GA
