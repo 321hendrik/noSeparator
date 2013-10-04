@@ -1,39 +1,67 @@
-// This is a test harness for your module
-// You should do something interesting in this harness 
-// to test out the module and to provide instructions 
-// to users on how to use it by example.
-
-
 // open a single window
 var win = Ti.UI.createWindow({
 	backgroundColor:'white'
 });
-var label = Ti.UI.createLabel();
-win.add(label);
 win.open();
 
-// TODO: write your module tests here
 var noSeparator = require('de.hpm.noseparator');
 Ti.API.info("module is => " + noSeparator);
 
-label.text = noSeparator.example();
+var view = Ti.UI.createView({
+	height: Ti.UI.FILL,
+	width: Ti.UI.FILL,
+	layout: 'vertical'
+});
+win.add(view);
 
-Ti.API.info("module exampleProp is => " + noSeparator.exampleProp);
-noSeparator.exampleProp = "This is a test value";
+var label = Ti.UI.createLabel({
+	top: 10,
+	text: 'noSeparator-Module'
+});
+view.add(label);
 
 if (Ti.Platform.name == "android") {
-	var proxy = noSeparator.createExample({
-		message: "Creating an example Proxy",
-		backgroundColor: "red",
-		width: 100,
-		height: 100,
-		top: 100,
-		left: 150
+	function createRow () {
+		var row = Ti.UI.createTableViewRow({
+			height: 20,
+			title: row,
+			backgroundColor: '#dedede'
+		});
+		return row;
+	}
+	
+	var rows = [];
+	for (var i = 5;i--;) {
+		rows.push(createRow());
+	}
+	
+	var tableViewWithSeparator = Ti.UI.createTableView({
+		data: rows,
+		headerTitle: 'With Separator',
+		top: 0,
+		width: Ti.UI.FILL,
+		height: Ti.UI.SIZE,
+		separatorColor: '#000000'
 	});
-
-	proxy.printMessage("Hello world!");
-	proxy.message = "Hi world!.  It's me again.";
-	proxy.printMessage("Hello world!");
-	win.add(proxy);
+	view.add(tableViewWithSeparator);
+	
+	var tableViewWithoutSeparator = Ti.UI.createTableView({
+		data: rows,
+		headerTitle: 'Without Separator',
+		top: 0,
+		width: Ti.UI.FILL,
+		height: Ti.UI.SIZE,
+		separatorColor: '#000000'
+	});
+	// remove the separator
+	noSeparator.Takes(tableViewWithoutSeparator);
+	view.add(tableViewWithoutSeparator);
+	
+} else {
+	var label2 = Ti.UI.createLabel({
+		top: 10,
+		text: 'This module is Android only.'
+	});
+	view.add(label2);
 }
 

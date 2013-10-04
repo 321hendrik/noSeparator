@@ -50,20 +50,6 @@ public class NoseparatorModule extends KrollModule
 	 
 	    Log.d(TAG, "Divider height set to zero!");
 	}
-	
-//	// Properties
-//	@Kroll.getProperty
-//	public String getExampleProp()
-//	{
-//		Log.d(TAG, "get example property");
-//		return "hello world";
-//	}
-//	
-//	
-//	@Kroll.setProperty
-//	public void setExampleProp(String value) {
-//		Log.d(TAG, "set example property: " + value);
-//	}
 
 }
 
