@@ -3,7 +3,7 @@ noSeparator
 
 ## Description
 
-Removes the row separators from a given TableRow.
+Hides the row separators from a given TableRow.
 
 ## Accessing the noSeparator Module
 
@@ -17,7 +17,7 @@ The noSeparator variable is a reference to the Module object.
 
 ### noSeparator.hideTableRowSeparator(TableView)
 
-Removes the row separators from the given TableView.
+Hides the row separators from the given TableView.
 
 ## Usage
 

@@ -53,8 +53,8 @@ if (Ti.Platform.name == "android") {
 		height: Ti.UI.SIZE,
 		separatorColor: '#000000'
 	});
-	// remove the separator
-	noSeparator.Takes(tableViewWithoutSeparator);
+	// hide the separator
+	noSeparator.hideTableRowSeparator(tableViewWithoutSeparator);
 	view.add(tableViewWithoutSeparator);
 	
 } else {
