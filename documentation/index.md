@@ -2,7 +2,7 @@
 
 ## Description
 
-TODO: Enter your module description here
+Removes the row separators from a given TableRow.
 
 ## Accessing the noSeparator Module
 
@@ -14,26 +14,18 @@ The noSeparator variable is a reference to the Module object.
 
 ## Reference
 
-TODO: If your module has an API, you should document
-the reference here.
+### noSeparator.hideTableRowSeparator(TableView)
 
-### ___PROJECTNAMEASIDENTIFIER__.function
-
-TODO: This is an example of a module function.
-
-### ___PROJECTNAMEASIDENTIFIER__.property
-
-TODO: This is an example of a module property.
+Removes the row separators from the given TableView.
 
 ## Usage
 
-TODO: Enter your usage example here
+see example/app.js
 
 ## Author
 
-TODO: Enter your author name, email and other contact
-details you want to share here. 
+Hendrik Elsner, 321hendrik@gmail.com
 
 ## License
 
-TODO: Enter your license/legal information here.
+Copyleft
